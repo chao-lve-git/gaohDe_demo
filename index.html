@@ -11,41 +11,6 @@
 <body>
 <div id="box"></div>
 <script type="text/javascript">
-
-    var box=document.getElementById('box');
-    var ww=document.documentElement.clientWidth;
-    var ww1=document.documentElement.clientHeight;
-    box.onmousedown=function (ev) {
-//        var ev=ev||window.event;
-        var a=ev.clientX-box.offsetLeft;
-        var b=ev.clientY-box.offsetTop;
-        console.log("ev",ev,"window.event",window.event);
-
-        document.onmousemove=function (ev) {
-            var ev=ev||window.event;
-            var c=ev.clientX-a;
-            var d=ev.clientY-b;
-
-            if(c<=0){
-                c=0;
-            }
-            //if (a>=ww-box.clientWidth) {
-            // 	  c=ww-box.clientWidth;
-            // }
-            if (d<=0) {
-                d=0;
-            }
-            // if (b>=ww1-box.clientHeight) {
-            // 	  d=ww1-box.clientHeight;
-            // }
-            box.style.left=c+'px';
-            box.style.top=d+'px';
-        }
-    }
-    box.onmouseup=function () {
-        document.onmousemove=null;
-    }
-
 </script>
 </body>
 </html>
